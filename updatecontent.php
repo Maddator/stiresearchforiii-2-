@@ -94,7 +94,7 @@
                             header("location: ./administrationpanel.php?admpanelallowed=true");
                             exit;
                         } else {
-                            echo "No rows were updated.";
+                            header("location: ./administrationpanel.php?admpanelallowed=true");
                         }
 
                         $stmt->close();
