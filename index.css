@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/baguio.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.navigation {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation .logo {
+  width: 135px;
+  cursor: pointer;
+}
+
+.navigation ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.navigation ul li a::hover {
+  opacity: 30%;
+  color: grey;
+}
+
+.navigation .usrlogin {
+  background-color: #f2f2f2;
+  color: #333333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.navigation .usrlogin a {
+  text-decoration: none;
+}
+
+.navigation .usrlogin a:hover {
+  background-color: #cccccc;
+}
+
+.navigation .hamburger {
+  margin-left: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.navigation .hamburger div {
+  width: 30px;
+  height: 2px;
+  margin: 6px 0;
+  background: #fff;
+}
+
+.content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.content h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  margin-top: 80px;
+  text-transform: uppercase;
+}
+
+.content p {
+  margin: 20px 100px;
+  font-size: 2rem;
+}
+
+.content .usrlogin {
+  background-color: #f2f2f2;
+  color: #333333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.content .usrlogin a {
+  text-decoration: none;
+}
+
+.content .usrlogin a:hover {
+  background-color: #937979;
+}
+
+.grid-imagescontents {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0;
+  position: relative;
+}
+
+.grid-imagescontents .grid-image-sections {
+  margin: -5px;
+  place-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.grid-imagescontents .grid-image-sections .grid-imageitems-subtitle {
+  font-weight: 700;
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 65px;
+}
+
+.grid-imagescontents .grid-image-sections .grid-imageitems-location {
+  font-weight: 400;
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 14px;
+}
+
+.grid-imagescontents .grid-image-sections .grid-imageitems-description {
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 33px;
+  background: rgba(0, 0, 0, 0.715);
+  width: 60%;
+  padding: 2%;
+  border-radius: 10px 20px;
+}
+
+.grid-imagescontents img {
+  width: 100%;
+}
+
+#overlay {
+  display: none;
+  position: absolute;
+}
+
+#popup {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #000000da;
+  width: 400px;
+  height: 300px;
+  margin-left: -200px;
+  margin-top: -250px; 
+  z-index: 200;
+}
+
+#popupclose {
+  color: white;
+  float: right;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.popupcontent {
+  color: white;
+  padding: 10px;
+  margin-top: 100px
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 35px;
+  height: 50%;
+}
+
+/* .grid-footer .info {
+} */
+
+.grid-footer .contact {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .navigation ul {
+    display: none;
+  }
+
+  .navigation .logo {
+    width: 95px;
+  }
+
+  .content h1 {
+    font-size: 1rem;
+  }
+
+  .content p {
+    font-size: 0.5rem;
+  }
+
+  .navigation .usrlogin {
+    display: none;
+  }
+
+  .navigation .hamburger {
+    display: inline-block;
+  }
+
+  .grid-imagescontents section .grid-imageitems-subtitle {
+    top: 30%;
+    font-size: 18px;
+  }
+  
+  .grid-imagescontents section .grid-imageitems-location {
+    top: 50%;
+    font-size: 14px;
+  }
+
+  .grid-imagescontents section .grid-imageitems-description {
+    top: 60%;
+    font-size: 8px;
+  }
+
+  .grid-footer {
+    display: block;
+  }
+
+  .grid-footer .contact {
+    margin-top: 50px;
+    display: block;
+  }
+}
